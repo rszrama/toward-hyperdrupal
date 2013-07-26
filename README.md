@@ -3,14 +3,16 @@ toward-hyperdrupal
 
 Toward HyperDrupal: Maturing REST on Drupal
 
-This repository contains the reveal.js deck used to present the Toward HyperDrupal
-presentation that began as a humble blog post on my blog. My goal is to be a part
-of educating the Drupal community to understand and conform to the constraints of
-REST to develop more evolvable and interoperable APIs.
+This repository contains the [reveal.js](https://github.com/hakimel/reveal.js) deck
+used to present the Toward HyperDrupal presentation that began as a humble blog post
+on my blog. My goal is to be a part of educating the Drupal community to understand
+and conform to the constraints of REST to develop more evolvable and interoperable
+web services.
 
-Starting with a look at how the World Wide Web works, we identify the underlying
-technologies and their constraints and apply them to web service API design.
-These are the URI, HTTP, and Hypermedia (e.g. HTML).
+Starting with a look at how the World Wide Web works, the presentation identifies
+the underlying technologies and their constraints and applies them to web service
+API design. These are the foundational components of REST APIS - the URI, HTTP,
+and Hypermedia (e.g. HTML).
 
 For further reading, consider the following articles:
 
