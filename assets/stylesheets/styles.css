@@ -36,31 +36,51 @@ body {
   padding: 15px 0;
   border-radius: 8px;
   line-height: 1em;
+  position: relative;
 }
-/* line 37, ../sass/styles.scss */
+/* line 39, ../sass/styles.scss */
 .reveal ul.rest_buttons li:nth-child(1) {
   background: rgba(197, 99, 194, 0.5);
   box-shadow: 0 0 30px rgba(197, 99, 194, 0.45);
 }
-/* line 41, ../sass/styles.scss */
+/* line 43, ../sass/styles.scss */
 .reveal ul.rest_buttons li:nth-child(2) {
   background: rgba(255, 255, 0, 0.5);
   box-shadow: 0 0 30px rgba(255, 255, 0, 0.45);
 }
-/* line 45, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 .reveal ul.rest_buttons li:nth-child(3) {
   background: rgba(0, 255, 255, 0.5);
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.45);
 }
-/* line 49, ../sass/styles.scss */
-.reveal ul.rest_buttons li:visible:last-child {
-  background: #FFF;
-}
-/* line 53, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 .reveal ul.rest_buttons .last {
   width: 100%;
   height: 1px;
   overflow: hidden;
   border: none;
   padding: 0;
+}
+/* line 63, ../sass/styles.scss */
+.reveal ul.rest_features li:nth-child(1), .reveal ul.rest_features li:nth-child(2), .reveal ul.rest_features li:nth-child(3) {
+  background: rgba(145, 206, 0, 0.5);
+  box-shadow: 0 0 30px rgba(145, 206, 0, 0.45);
+}
+/* line 66, ../sass/styles.scss */
+.reveal ul.rest_features li:nth-child(1).off, .reveal ul.rest_features li:nth-child(2).off, .reveal ul.rest_features li:nth-child(3).off {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+  color: rgba(255, 255, 255, 0.75);
+}
+/* line 73, ../sass/styles.scss */
+.reveal ul.rest_features li .symbol {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: #91ce00;
+}
+/* line 79, ../sass/styles.scss */
+.reveal ul.rest_features li.off .symbol {
+  top: 10px;
+  color: #ff0000;
 }

@@ -64,7 +64,7 @@
           </section>
 
           <section>
-            <img src="assets/images/DCLogo_2C_on_black.png" class="logo" />
+            <img src="assets/images/DCLogo_2C_on_black.png" class="simple" />
             <p>So why am I not giving another Commerce talk?</p>
           </section>
         </section>
@@ -88,15 +88,13 @@
 
           <section>
             <h2>URI</h2>
-            <p>
-              Browser with a URL bar.
-            </p>
+            <img src="assets/images/browser.png" />
+            <!-- Thanks for sharing the browser image, guys: http://dribbble.com/shots/785555 -->
           </section>
 
           <section>
             <h2>HTTP Request</h2>
             <pre><code>
-
   # Request
   GET /page/1 HTTP/1.1
   Host: www.example.com
@@ -106,7 +104,6 @@
           <section>
             <h2>HTML</h2>
             <pre><code>
-
   # Response
   HTTP/1.1 200 Ok
   Content-Type: text/html;charset=UTF-8
@@ -119,6 +116,69 @@
 
   ...
             </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>3. Title for Section</h2>
+          </section>
+          <section>
+            <h2>XML/RPC/SOAP</h2>
+            <br />
+            <p><em>Uses HTTP purely as a transport mechanism.</em></p>
+            <br />
+            <ul class="rest_buttons rest_features">
+              <li class="off"><span class="symbol">x</span>URI</li>
+              <li class="off"><span class="symbol">x</span>HTTP</li>
+              <li class="off"><span class="symbol">x</span>Hypermedia</li>
+              <li class="last"></li>
+            </ul>
+          </section>
+          <section>
+            <p>Why do more?</p>
+            <iframe width="100%" height="460" src="//www.youtube.com/embed/03T2pKO8ItE?rel=0&theme=dark&modestbranding=1&color=white" frameborder="0" allowfullscreen></iframe>
+          </section>
+          <section>
+            <h2>RPC URI-tunneling</h2>
+            <br />
+            <p>/api/user/1/delete - <em>This is like have a browser specific to your website because you decided to use a custom HTML tag or form method.</em></p>
+            <br />
+            <ul class="rest_buttons rest_features">
+              <li class="on"><span class="symbol">&#10004;</span>URI</li>
+              <li class="off"><span class="symbol">x</span>HTTP</li>
+              <li class="off"><span class="symbol">x</span>Hypermedia</li>
+              <li class="last"></li>
+            </ul>
+            <p></p>
+          </section>
+          <section>
+            <h2>HTTP Based API</h2>
+            <br />
+            <img src="assets/images/notbad.png" class="simple" style="float: right;" >
+            <p style="text-align:left"><em>Most Drupal Sites</em></p>
+            <pre style="box-shadow: none; width: 70%; margin:0;"><code>-> Get /api/user/1
+Returns application/json</code></pre>
+
+            <ul class="rest_buttons rest_features" style="clear:both;">
+              <li class="on"><span class="symbol">&#10004;</span>URI</li>
+              <li class="on"><span class="symbol">&#10004;</span>HTTP</li>
+              <li class="off"><span class="symbol">x</span>Hypermedia</li>
+              <li class="last"></li>
+            </ul>
+          </section>
+          <section>
+            <h2>REST</h2>
+            <br />
+            <p><em>The API response tells me where to go next.</em></p>
+            <br />
+
+            <ul class="rest_buttons rest_features" style="clear:both;">
+              <li class="on"><span class="symbol">&#10004;</span>URI</li>
+              <li class="on"><span class="symbol">&#10004;</span>HTTP</li>
+              <li class="on"><span class="symbol">&#10004;</span>Hypermedia</li>
+              <li class="last"></li>
+            </ul>
           </section>
         </section>
 
