@@ -1,0 +1,14 @@
+body {
+  background: url(../images/bkg.png);
+}
+
+.reveal {
+  h2 {
+    background: url(../images/bkg-highlight.png);
+    padding: 30px 0 27px 0;
+    color: #FFF;
+  }
+  pre code {
+    background: url(../images/bkg-dark.png);
+  }
+}
