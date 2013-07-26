@@ -7,3 +7,4 @@ lib
 plugin
 Gruntfile.js
 package.json
+.sass-cache
