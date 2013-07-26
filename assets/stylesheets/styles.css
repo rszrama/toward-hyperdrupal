@@ -1,0 +1,22 @@
+/* line 1, ../sass/styles.scss */
+body {
+  background: url(../images/bkg.png);
+}
+
+/* line 6, ../sass/styles.scss */
+.reveal h2 {
+  background: url(../images/bkg-highlight.png);
+  padding: 30px 0 27px 0;
+  color: #FFF;
+}
+/* line 11, ../sass/styles.scss */
+.reveal pre code {
+  background: url(../images/bkg-dark.png);
+}
+/* line 14, ../sass/styles.scss */
+.reveal img.simple {
+  border: none;
+  background: none;
+  margin-bottom: 50px;
+  box-shadow: none;
+}
