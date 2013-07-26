@@ -13,3 +13,10 @@ body {
 .reveal pre code {
   background: url(../images/bkg-dark.png);
 }
+/* line 14, ../sass/styles.scss */
+.reveal img.simple {
+  border: none;
+  background: none;
+  margin-bottom: 50px;
+  box-shadow: none;
+}

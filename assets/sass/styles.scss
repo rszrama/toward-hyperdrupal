@@ -11,4 +11,10 @@ body {
   pre code {
     background: url(../images/bkg-dark.png);
   }
+  img.simple {
+    border: none;
+    background: none;
+    margin-bottom: 50px;
+    box-shadow: none;
+  }
 }
