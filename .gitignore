@@ -1,0 +1,9 @@
+# Ignoring the reveal.js repository that lives
+# in this directory.
+css
+examples
+js
+lib
+plugin
+Gruntfile.js
+package.json
