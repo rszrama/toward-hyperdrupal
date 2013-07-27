@@ -24,6 +24,7 @@ Bibliography
 - [A Brief Introduction to REST](http://www.infoq.com/articles/rest-introduction) by Stefan Tilkov
 - [Justice Will Take Us Millions of Intricate Moves](http://www.crummy.com/writing/speaking/2008-QCon/) by Leonard Richardson
 - [Richardson Maturity Model](http://martinfowler.com/articles/richardsonMaturityModel.html) by Martin Fowler
+- [Haters Gonna HATEOAS](http://timelessrepo.com/haters-gonna-hateoas) by Steve Klabnik
 - [Classification of HTTP-based APIs](http://nordsc.com/ext/classification_of_http_based_apis.html) by Jan Algermissen
 - [REST APIs Must Be Hypertext Driven](http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) by Roy Fielding
 
