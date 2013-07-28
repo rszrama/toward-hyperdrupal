@@ -14,6 +14,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/default.css" id="theme">
     <link rel="stylesheet" href="assets/stylesheets/styles.css"> <!-- Just a few changes, not worth a whole theme. -->
@@ -57,15 +59,58 @@
             <p>
               Ryan Szrama, Community Dev at <a href="http://commerceguys.com">Commerce Guys</a>
             </p>
+          </section>
+
+          <section>
+            <a href="http://www.drupalcommerce.org">
+              <img src="assets/images/DCLogo_2C_on_black.png" class="simple" />
+            </a>
+            <p>So why am I not giving my usual Commerce presentation?</p>
+            <p>Why talk about REST and Hypermedia?</p>
 
             <aside class="notes">
-              Speaker notes, hit 's' to view in a separate window.
+              My interest was piqued when I first researched how to implement a
+              REST API for a large scale Commerce deployment involving a Commerce
+              master server that managed transactions for a variety of client
+              sites. I knew the Services module was a thing, but I'd never used
+              it or really understood how it facilitated the building of APIs.
             </aside>
           </section>
 
           <section>
-            <img src="assets/images/DCLogo_2C_on_black.png" class="simple" />
-            <p>So why am I not giving another Commerce talk?</p>
+            <p>Maybe I'm attracted to constrained systems...</p>
+            <img src="assets/images/qbasic.gif" class="simple" width="650" />
+            <a href="http://en.wikipedia.org/wiki/QBasic">http://en.wikipedia.org/wiki/QBasic</a>
+
+            <aside class="notes">
+              I love to see the creativity that arises when people set out to
+              solve new problems using an abstract set of constraints to guide
+              their design and development decisions.
+            </aside>
+          </section>
+
+          <section>
+            <p>And niche development communities...</p>
+            <img src="assets/images/allies-and-bridges.jpg" class="simple" />
+            <a href="http://en.wikipedia.org/wiki/Roguelike">http://en.wikipedia.org/wiki/Roguelike</a>
+
+            <aside class="notes">
+              Because the people in the community are committed to pushing
+              forward an idea or concept out of passion for their system or
+              technology.
+            </aside>
+          </section>
+
+          <section>
+            <p>
+              The promise of REST is the API equivalent<br />
+              of a wiki walk, each response asking,<br />
+              "Would you like to know (or do) more?"
+            </p>
+
+            <aside class="notes">
+              Let's talk about what a wiki walk is and what actually makes it possible.
+            </aside>
           </section>
         </section>
 
@@ -73,10 +118,13 @@
         <section>
           <section>
             <h2>2. The World Wide Web</h2>
+
+            <small>
+              Source: <a href="http://www.crummy.com/writing/speaking/2008-QCon/">http://www.crummy.com/writing/speaking/2008-QCon/</a>
+            </small>
           </section>
 
           <section>
-
             <img src="assets/images/globe.png" class="simple" />
             <ul class="rest_buttons">
               <li class="fragment">URI</li>
@@ -88,22 +136,38 @@
 
           <section>
             <h2>URI</h2>
-            <img src="assets/images/browser.png" />
             <!-- Thanks for sharing the browser image, guys: http://dribbble.com/shots/785555 -->
+            <img src="assets/images/browser.png" />
+
+            <aside class="notes">
+              Simple, straightforward, but with dependable parts: the protocol,
+              the host, the path, the fragment, and the query string. Once we
+              enter a URL, the browser knows how to split it up and work with it.
+            </aside>
           </section>
 
           <section>
             <h2>HTTP Request</h2>
-            <pre><code>
+            <pre>
+
   # Request
   GET /page/1 HTTP/1.1
   Host: www.example.com
-            </code></pre>
+  Accept: text/html
+            </pre>
+
+            <aside class="notes">
+              HTTP is more complex, but its use is standardized - we enforce
+              constraints on the types of requests and headers, for example.
+              Thanks to the consistency of client and server implementations,
+              we can make solid assumptions and optimizations around the protocol.
+            </aside>
           </section>
 
           <section>
             <h2>HTML</h2>
-            <pre><code>
+            <pre>
+
   # Response
   HTTP/1.1 200 Ok
   Content-Type: text/html;charset=UTF-8
@@ -115,18 +179,99 @@
   &lt;a href="...">See more examples.&lt;/a>
 
   ...
-            </code></pre>
+            </pre>
+
+            <aside class="notes">
+              The response is HTML, which is actually hypermedia. It has
+              "hyperlinks" that my browser knows how to render so I can click on
+              them if I want to learn more about that that link promises.
+
+              And it's not just limited to outbound links - there are also embed
+              links (images) and "template links" (GET forms). I can also send
+              instructions that the server can use to create new information
+              via POST forms, and if I use JavaScript, I can do even more.
+            </aside>
+          </section>
+
+          <section>
+            <img src="assets/images/wiki-qbasic.png" />
+          </section>
+          <section>
+            <img src="assets/images/wiki-programming.png" />
+          </section>
+          <section>
+            <img src="assets/images/wiki-programming-paradigms.png" />
+          </section>
+          <section>
+            <img src="assets/images/wiki-external.png" />
+          </section>
+          <section>
+            <img src="assets/images/wiki-external-page.png" />
+          </section>
+
+          <section>
+            The WWW virtualized and democratized the library<br />
+            of human knowledge and made it accessible on a<br />
+            global, distributed network.
+
+            <aside class="notes">
+              But we haven't stopped there. We're using the same technology to
+              virtualize the office...
+            </aside>
+          </section>
+
+          <section>
+            <img src="assets/images/cg-erp.png" />
+
+            <aside class="notes">
+              The government...
+            </aside>
+          </section>
+
+          <section>
+            <img src="assets/images/data-gov.png" />
+
+            <aside class="notes">
+              The store...
+            </aside>
+          </section>
+
+          <section>
+            <img src="assets/images/conduit.jpg" />
+
+            <aside class="notes">
+              And basically everything else. Everything has an API, and anything
+              can become a service. So how do we communicate between everything?
+            </aside>
           </section>
         </section>
 
         <section>
           <section>
-            <h2>3. Title for Section</h2>
+            <h2>3. HTTP-based APIs</h2>
+            <small>
+              Source: <a href="http://nordsc.com/ext/classification_of_http_based_apis.html">http://nordsc.com/ext/classification_of_http_based_apis.html</a>
+            </small>
           </section>
+
           <section>
-            <h2>XML/RPC/SOAP</h2>
+            <h2>XML-RPC / SOAP</h2>
             <br />
-            <p><em>Uses HTTP purely as a transport mechanism.</em></p>
+            <p><em>Use HTTP purely as a transport mechanism.</em></p>
+            <pre>
+
+  &lt;?xml version="1.0"?>
+  &lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    &lt;soap:Header>
+    &lt;/soap:Header>
+    &lt;soap:Body>
+      &lt;m:GetStockPrice xmlns:m="http://www.example.org/stock">
+        &lt;m:StockName>IBM</m:StockName>
+      &lt;/m:GetStockPrice>
+    &lt;/soap:Body>
+  &lt;/soap:Envelope>
+            </pre>
+
             <br />
             <ul class="rest_buttons rest_features">
               <li class="off"><span class="symbol">x</span>URI</li>
@@ -138,11 +283,34 @@
           <section>
             <p>Why do more?</p>
             <iframe width="100%" height="460" src="//www.youtube.com/embed/03T2pKO8ItE?rel=0&theme=dark&modestbranding=1&color=white" frameborder="0" allowfullscreen></iframe>
+            <img src="http://www.creativemab.com/wp-content/uploads/2011/04/Geris-Game.png" style="display: none;" />
+
+            <aside class="notes">
+              Is anyone familiar with Geri? Geri had a problem - there was no
+              one around to play against, so he played against himself! However,
+              if he wanted to, he could have begun a remote game with someone
+              who understood the rules and perhaps had a chessboard available
+              to use to keep track of the current state of the game.
+            </aside>
           </section>
+
+          <section>
+            Behold, the SOAP message:
+            <img src="assets/images/chess.jpg" />
+          </section>
+
           <section>
             <h2>RPC URI-tunneling</h2>
             <br />
-            <p>/api/user/1/delete - <em>This is like have a browser specific to your website because you decided to use a custom HTML tag or form method.</em></p>
+            <em>Idiosyncratic interfaces require extra documentation<br/>
+            and tightly coupled servers and clients.</em>
+            <pre>
+
+  POST /api/user/1/delete
+
+  POST /api/user/1/update
+            </pre>
+
             <br />
             <ul class="rest_buttons rest_features">
               <li class="on"><span class="symbol">&#10004;</span>URI</li>
@@ -152,13 +320,28 @@
             </ul>
             <p></p>
           </section>
+
           <section>
-            <h2>HTTP Based API</h2>
+            <h2>HTTP-based Type I / II</h2>
             <br />
             <img src="assets/images/notbad.png" class="simple" style="float: right;" >
-            <p style="text-align:left"><em>Most Drupal Sites</em></p>
-            <pre style="box-shadow: none; width: 70%; margin:0;"><code>-> Get /api/user/1
-Returns application/json</code></pre>
+            <p style="text-align: left;">
+              <em>Use HTTP methods and response codes:</em>
+            </p>
+            <pre style="box-shadow: none; width: 70%; margin:0;">
+
+  # A Type I message uses a generic media type
+  GET /api/user/1
+  Accept: application/json
+
+  PUT /api/user/1
+  DELETE /api/user/1
+  POST /api/user
+
+  # A Type II message is self-descriptive
+  GET /api/user/1
+  Accept: application/hal+json
+            </pre>
 
             <ul class="rest_buttons rest_features" style="clear:both;">
               <li class="on"><span class="symbol">&#10004;</span>URI</li>
@@ -167,12 +350,23 @@ Returns application/json</code></pre>
               <li class="last"></li>
             </ul>
           </section>
+
           <section>
             <h2>REST</h2>
             <br />
-            <p><em>The API response tells me where to go next.</em></p>
-            <br />
+            <p><em>Hypermedia API responses include the controls I need to<br/>navigate or manipulate application resources.</em></p>
+            <pre>
 
+  &lt;maze version="1.0">
+    &lt;collection href="/maze/maze/">
+      &lt;link rel="maze" href="/maze/maze/five-by-five/" />
+    &lt;/collection>
+  &lt;/maze>
+            </pre>
+
+            <small>
+              Source: <a href="http://amundsen.com/media-types/maze/">http://amundsen.com/media-types/maze/</a>
+            </small>
             <ul class="rest_buttons rest_features" style="clear:both;">
               <li class="on"><span class="symbol">&#10004;</span>URI</li>
               <li class="on"><span class="symbol">&#10004;</span>HTTP</li>
@@ -180,10 +374,97 @@ Returns application/json</code></pre>
               <li class="last"></li>
             </ul>
           </section>
+
+          <section>
+            <h2>The Richardson Maturity Model</h2>
+
+            <img src="http://martinfowler.com/articles/images/richardsonMaturityModel/overview.png" />
+            <small>
+              Source: <a href="http://martinfowler.com/articles/richardsonMaturityModel.html">http://martinfowler.com/articles/richardsonMaturityModel.html</a>
+            </small>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>4. Toward HyperDrupal</h2>
+
+            <small>
+              Follow along: <a href="http://hyperdrupal.org">http://hyperdrupal.org</a>
+            </small>
+          </section>
+
+          <section>
+            <h2>Drupal 7 and earlier</h2>
+
+            <p>
+              Using the <a href="http://drupal.org/project/services">Services module</a>, most Drupal based<br />
+              web services are a combination of RPC URI-Tunneling<br />
+              and HTTP-based Type I APIs.
+            </p>
+
+            <pre>
+
+  # Login is an example of RPC URI-Tunneling
+  POST /user/login
+
+  # While other resources are HTTP-based Type I
+  GET /user/1
+  DELETE /node/3
+            </pre>
+          </section>
+
+          <section>
+            <h2>Drupal 8</h2>
+
+            <p>
+              Drupal core ships with a REST module that supports:
+            </p>
+
+            <ul class="drupal-8">
+              <li class="fragment">Entities as resources with unique URIs</li>
+              <li class="fragment">Representations in different formats</li>
+              <li class="fragment">Manipulation via the HTTP interface</li>
+              <li class="fragment last">Self-descriptive messages via <a href="http://stateless.co/hal_specification.html">HAL</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Next Steps</h2>
+
+            <p style="text-align: left;">
+              Next steps involve both education and code:
+            </p>
+
+            <ul class="next-steps">
+              <li class="fragment">Communicate the constraints and the promise of REST</li>
+              <li class="fragment">Enrich our (HAL and other) responses with hypermedia</li>
+              <li class="fragment">Document REST server and client <a href="http://offers.apigee.com/api-design-ebook-rr/">best practices</a></li>
+              <li class="fragment last">Develop tools that make it even easier</li>
+            </ul>
+
+            <aside class="notes">
+              Talk about how being a RESTful web service is like Paul Graham's
+              illustration comparing the startup mentality to that of aspiring
+              actors.
+            </aside>
+          </section>
+
+          <section>
+            <h2>Practical Example</h2>
+
+            <p>
+              Commerce Mobile:
+            </p>
+            <img src="assets/images/ck4m-main-final.png" />
+          </section>
         </section>
 
         <section>
           <h2>Questions?</h2>
+          <small>
+            Bibliography / source: <a href="https://github.com/rszrama/toward-hyperdrupal">https://github.com/rszrama/toward-hyperdrupal</a>
+          </small>
         </section>
 
       </div>

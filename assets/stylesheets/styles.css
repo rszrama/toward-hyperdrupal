@@ -10,6 +10,7 @@ body {
   color: #FFF;
 }
 /* line 15, ../sass/styles.scss */
+.reveal pre,
 .reveal pre code {
   background: url(../images/bkg-dark.png);
 }
